@@ -1,0 +1,34 @@
+
+### GET THE USER by ID via PATH
+GET http://localhost:8080/Users/1
+### GET INVALID USER by ID via PATH
+GET http://localhost:8080/Users/9999
+
+### GET ALL USERS
+GET http://localhost:8080/Users
+
+### GET USER by EMAIL via PATH
+GET http://localhost:8080/Users/getByEmail/admin@mail.com
+### GET INVALID USER by EMAIL via PATH
+GET http://localhost:8080/Users/getByEmail/
+### GET INVALID USER by EMAIL via PATH
+GET http://localhost:8080/Users/getByEmail/ZZZZZ
+
+### ADD USER via JSON
+POST http://localhost:8080/Users/add
+Content-Type: application/json
+
+{
+  "name":"test",
+  "email":"test@test.com",
+  "yob":"1988",
+  "role":"USER",
+  "termsandconditions": "true"
+}
+
+### DELETE USER by ID via PATH
+DELETE http://localhost:8080/Users/delete/5
+### DELETE INVALID USER by ID via PATH
+DELETE http://localhost:8080/Users/delete/99999
+
+### @PutMapping("/update")
